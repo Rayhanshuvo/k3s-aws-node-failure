@@ -1,0 +1,261 @@
+Target http://52.77.229.6/api/whoami | concurrency 10 | 200 req/s max | 240s
+ sec     ok   err  nodes / errors
+   0    133     0  worker1=68 worker2=65
+   1    199     0  worker1=97 worker2=102
+   2    200     0  worker1=94 worker2=106
+   3    200     0  worker1=99 worker2=101
+   4    201     0  worker1=100 worker2=101
+   5    199     0  worker1=97 worker2=102
+   6    200     0  worker1=107 worker2=93
+   7    201     0  worker1=99 worker2=102
+   8    199     0  worker1=98 worker2=101
+   9    200     0  worker1=105 worker2=95
+  10    191     0  worker1=117 worker2=74
+  11    198     0  worker1=105 worker2=93
+  12    200     0  worker1=102 worker2=98
+  13    202     0  worker1=97 worker2=105
+  14    200     0  worker1=98 worker2=102
+  15    200     0  worker1=97 worker2=103
+  16    200     0  worker1=88 worker2=112
+  17    200     0  worker1=104 worker2=96
+  18    200     0  worker1=91 worker2=109
+  19    200     0  worker1=91 worker2=109
+     ==== 20.0s  EVENT START: aws ec2 stop-instances --force --instance-ids i-03092cde70feafaae > /dev/null ====
+  20    200     0  worker1=91 worker2=109
+  21    200     0  worker1=105 worker2=95
+     ==== 23.0s  EVENT DONE (ok) ====
+  22    198     0  worker1=95 worker2=103
+  23    115    70  worker1=69 worker2=46  !! connection closed=57, connection reset=13 <-- ERRORS
+  24      0   178    !! connection closed=133, connection reset=45 <-- ERRORS
+  25      0   183    !! connection reset=61, connection closed=122 <-- ERRORS
+  26      0   178    !! connection closed=129, connection reset=49 <-- ERRORS
+  27      0   185    !! connection closed=145, connection reset=40 <-- ERRORS
+  28      0   182    !! connection closed=127, connection reset=55 <-- ERRORS
+  29      0   181    !! connection reset=53, connection closed=128 <-- ERRORS
+  30      0   180    !! connection reset=61, connection closed=119 <-- ERRORS
+  31      0   184    !! connection reset=45, connection closed=139 <-- ERRORS
+  32      0   179    !! connection closed=131, connection reset=48 <-- ERRORS
+  33      0   177    !! connection closed=135, connection reset=42 <-- ERRORS
+  34      0   165    !! connection reset=38, connection closed=127 <-- ERRORS
+  35      0   162    !! connection closed=114, connection reset=48 <-- ERRORS
+  36      0   180    !! connection closed=135, connection reset=45 <-- ERRORS
+  37      0   183    !! connection closed=147, connection reset=36 <-- ERRORS
+  38      0   183    !! connection closed=144, connection reset=39 <-- ERRORS
+  39      0   181    !! connection reset=30, connection closed=151 <-- ERRORS
+  40      0   181    !! connection closed=151, connection reset=30 <-- ERRORS
+  41      0   183    !! connection closed=134, connection reset=49 <-- ERRORS
+  42      0   180    !! connection closed=142, connection reset=38 <-- ERRORS
+  43      0   181    !! connection closed=118, connection reset=63 <-- ERRORS
+  44      0   182    !! connection reset=47, connection closed=135 <-- ERRORS
+  45      0   183    !! connection closed=142, connection reset=41 <-- ERRORS
+  46      0   164    !! connection closed=127, connection reset=37 <-- ERRORS
+  47      0   161    !! connection closed=121, connection reset=40 <-- ERRORS
+  48      0   183    !! connection closed=141, connection reset=42 <-- ERRORS
+  49      0   181    !! connection reset=61, connection closed=120 <-- ERRORS
+  50      0   180    !! connection closed=141, connection reset=39 <-- ERRORS
+  51      0   181    !! connection reset=35, connection closed=146 <-- ERRORS
+  52      0   187    !! connection reset=43, connection closed=144 <-- ERRORS
+  53      0   180    !! connection closed=146, connection reset=34 <-- ERRORS
+  54      0   182    !! connection closed=133, connection reset=49 <-- ERRORS
+  55      0   180    !! connection reset=43, connection closed=137 <-- ERRORS
+  56      0   181    !! connection reset=47, connection closed=134 <-- ERRORS
+  57      0   183    !! connection closed=155, connection reset=28 <-- ERRORS
+  58      0   166    !! connection closed=123, connection reset=43 <-- ERRORS
+  59      0   163    !! connection closed=118, connection reset=45 <-- ERRORS
+  60      0   180    !! connection closed=140, connection reset=40 <-- ERRORS
+  61      0   182    !! connection reset=36, connection closed=146 <-- ERRORS
+  62      0   181    !! connection reset=58, connection closed=123 <-- ERRORS
+  63      0   179    !! connection closed=127, connection reset=52 <-- ERRORS
+  64      0   182    !! connection closed=136, connection reset=46 <-- ERRORS
+  65      0   180    !! connection closed=139, connection reset=41 <-- ERRORS
+  66      0   181    !! connection reset=62, connection closed=119 <-- ERRORS
+  67      0   180    !! connection closed=129, connection reset=51 <-- ERRORS
+  68      0   181    !! connection closed=143, connection reset=38 <-- ERRORS
+  69      0   182    !! connection closed=154, connection reset=28 <-- ERRORS
+  70     79   105  worker1=79  !! connection closed=88, connection reset=17 <-- ERRORS
+  71    190     0  worker1=190
+  72    200     0  worker1=200
+  73    200     0  worker1=200
+  74    201     0  worker1=201
+  75    200     0  worker1=200
+  76    201     0  worker1=201
+  77    199     0  worker1=199
+  78    200     0  worker1=200
+  79    201     0  worker1=201
+  80    200     0  worker1=200
+  81    198     0  worker1=198
+  82    191     0  worker1=191
+  83    189     0  worker1=189
+  84    200     0  worker1=200
+  85    201     0  worker1=201
+  86    199     0  worker1=199
+  87    200     0  worker1=200
+  88    201     0  worker1=201
+  89    200     0  worker1=200
+  90    198     0  worker1=198
+  91    200     0  worker1=200
+  92    201     0  worker1=201
+  93    192     0  worker1=192
+  94    190     0  worker1=190
+  95    199     0  worker1=199
+  96    201     0  worker1=201
+  97    200     0  worker1=200
+  98    200     0  worker1=200
+  99    200     0  worker1=200
+ 100    200     0  worker1=200
+ 101    200     0  worker1=200
+ 102    200     0  worker1=200
+ 103    200     0  worker1=200
+ 104    199     0  worker1=199
+ 105    191     0  worker1=191
+ 106    190     0  worker1=190
+ 107    199     0  worker1=199
+ 108    200     0  worker1=200
+ 109    200     0  worker1=200
+ 110    200     0  worker1=200
+ 111    200     0  worker1=200
+ 112    201     0  worker1=201
+ 113    200     0  worker1=200
+ 114    200     0  worker1=200
+ 115    200     0  worker1=200
+ 116    199     0  worker1=199
+ 117    192     0  worker1=192
+ 118    189     0  worker1=189
+ 119    201     0  worker1=201
+ 120    199     0  worker1=199
+ 121    200     0  worker1=200
+ 122    200     0  worker1=200
+ 123    201     0  worker1=201
+ 124    200     0  worker1=200
+ 125    200     0  worker1=200
+ 126    200     0  worker1=200
+ 127    199     0  worker1=199
+ 128    200     0  worker1=200
+ 129    192     0  worker1=192
+ 130    190     0  worker1=190
+ 131    197     0  worker1=197
+ 132    202     0  worker1=202
+ 133    201     0  worker1=201
+ 134    199     0  worker1=199
+ 135    200     0  worker1=200
+ 136    200     0  worker1=200
+ 137    201     0  worker1=201
+ 138    200     0  worker1=200
+ 139    200     0  worker1=200
+ 140    199     0  worker1=199
+ 141    191     0  worker1=191
+ 142    190     0  worker1=190
+ 143    201     0  worker1=201
+ 144    200     0  worker1=200
+ 145    200     0  worker1=200
+ 146    200     0  worker1=200
+ 147    200     0  worker1=200
+ 148    200     0  worker1=200
+ 149    200     0  worker1=200
+ 150    198     0  worker1=198
+ 151    202     0  worker1=202
+ 152    200     0  worker1=200
+ 153    191     0  worker1=191
+ 154    187     0  worker1=187
+ 155    202     0  worker1=202
+ 156    199     0  worker1=199
+ 157    201     0  worker1=201
+ 158    200     0  worker1=200
+ 159    200     0  worker1=200
+ 160    201     0  worker1=201
+ 161    199     0  worker1=199
+ 162    200     0  worker1=200
+ 163    200     0  worker1=200
+ 164    201     0  worker1=201
+ 165    190     0  worker1=190
+ 166    190     0  worker1=190
+ 167    200     0  worker1=200
+ 168    200     0  worker1=200
+ 169    200     0  worker1=200
+ 170    199     0  worker1=199
+ 171    201     0  worker1=201
+ 172    200     0  worker1=200
+ 173    200     0  worker1=200
+ 174    200     0  worker1=200
+ 175    200     0  worker1=200
+ 176    200     0  worker1=200
+ 177    191     0  worker1=191
+ 178    189     0  worker1=189
+ 179    200     0  worker1=200
+ 180    200     0  worker1=200
+ 181    200     0  worker1=200
+ 182    200     0  worker1=200
+ 183    200     0  worker1=200
+ 184    200     0  worker1=200
+ 185    200     0  worker1=200
+ 186    200     0  worker1=200
+ 187    200     0  worker1=200
+ 188    200     0  worker1=200
+ 189    191     0  worker1=191
+ 190    188     0  worker1=188
+ 191    199     0  worker1=199
+ 192    200     0  worker1=200
+ 193    200     0  worker1=200
+ 194    197     0  worker1=197
+ 195    200     0  worker1=200
+ 196    201     0  worker1=201
+ 197    200     0  worker1=200
+ 198    200     0  worker1=200
+ 199    200     0  worker1=200
+ 200    200     0  worker1=200
+ 201    191     0  worker1=191
+ 202    190     0  worker1=190
+ 203    200     0  worker1=200
+ 204    200     0  worker1=200
+ 205    200     0  worker1=200
+ 206    200     0  worker1=200
+ 207    200     0  worker1=200
+ 208    200     0  worker1=200
+ 209    200     0  worker1=200
+ 210    200     0  worker1=200
+ 211    200     0  worker1=200
+ 212    200     0  worker1=200
+ 213    191     0  worker1=191
+ 214    190     0  worker1=190
+ 215    200     0  worker1=200
+ 216    200     0  worker1=200
+ 217    200     0  worker1=200
+ 218    200     0  worker1=200
+ 219    200     0  worker1=200
+ 220    200     0  worker1=200
+ 221    199     0  worker1=199
+ 222    201     0  worker1=201
+ 223    200     0  worker1=200
+ 224    200     0  worker1=200
+ 225    191     0  worker1=191
+ 226    190     0  worker1=190
+ 227    200     0  worker1=200
+ 228    200     0  worker1=200
+ 229    200     0  worker1=200
+ 230    200     0  worker1=200
+ 231    200     0  worker1=200
+ 232    200     0  worker1=200
+ 233    200     0  worker1=200
+ 234    200     0  worker1=200
+ 235    200     0  worker1=200
+ 236    200     0  worker1=200
+ 237    191     0  worker1=191
+ 238    190     0  worker1=190
+ 239    200     0  worker1=200
+ 240     10     0  worker1=10
+
+=== Summary ===
+requests       : 46647
+failed         : 8406 (18.02%)
+  connection closed   : 6335
+  connection reset    : 2071
+seconds w/ err : 48 (from 23s to 70s)
+latency p50    : 27 ms
+latency p99    : 37 ms
+latency max    : 1050 ms
+answered by node:
+  worker1             : 35919 (93.9%)
+  worker2             : 2322 (6.1%)
+event          : 20.0s EVENT START: aws ec2 stop-instances --force --instance-ids i-03092cde70feafaae > /dev/null
+event          : 23.0s EVENT DONE (ok)
+raw data       : results/e3-node-down.csv

@@ -1,0 +1,74 @@
+Target http://52.77.229.6/api/whoami | concurrency 10 | 200 req/s max | 60s
+ sec     ok   err  nodes / errors
+   0     10     0  worker1=10
+   1    115     0  worker1=115
+   2    200     0  worker1=200
+   3    200     0  worker1=200
+   4    200     0  worker1=200
+   5    200     0  worker1=200
+   6    200     0  worker1=200
+   7    200     0  worker1=200
+   8    200     0  worker1=200
+   9    200     0  worker1=200
+  10    200     0  worker1=200
+  11    197     0  worker1=197
+  12    183     0  worker1=183
+  13    200     0  worker1=200
+  14    200     0  worker1=200
+  15    200     0  worker1=200
+  16    200     0  worker1=200
+  17    200     0  worker1=200
+  18    200     0  worker1=200
+  19    200     0  worker1=200
+  20    200     0  worker1=200
+  21    200     0  worker1=200
+  22    200     0  worker1=200
+  23    198     0  worker1=198
+  24    183     0  worker1=183
+  25    196     0  worker1=196
+  26    200     0  worker1=200
+  27    200     0  worker1=200
+  28    200     0  worker1=200
+  29    200     0  worker1=200
+  30    200     0  worker1=200
+  31    200     0  worker1=200
+  32    200     0  worker1=200
+  33    200     0  worker1=200
+  34    200     0  worker1=200
+  35    198     0  worker1=198
+  36    183     0  worker1=183
+  37    200     0  worker1=200
+  38    200     0  worker1=200
+  39    200     0  worker1=200
+  40    200     0  worker1=200
+  41    200     0  worker1=200
+  42    200     0  worker1=200
+  43    200     0  worker1=200
+  44    200     0  worker1=200
+  45    200     0  worker1=200
+  46    200     0  worker1=200
+  47    198     0  worker1=198
+  48    183     0  worker1=183
+  49    200     0  worker1=200
+  50    200     0  worker1=200
+  51    200     0  worker1=200
+  52    200     0  worker1=200
+  53    200     0  worker1=200
+  54    200     0  worker1=200
+  55    200     0  worker1=200
+  56    200     0  worker1=200
+  57    200     0  worker1=200
+  58    200     0  worker1=200
+  59    198     0  worker1=198
+  60     10     0  worker1=10
+
+=== Summary ===
+requests       : 11652
+failed         : 0 (0.00%)
+seconds w/ err : 0
+latency p50    : 27 ms
+latency p99    : 35 ms
+latency max    : 1386 ms
+answered by node:
+  worker1             : 11652 (100.0%)
+raw data       : results/e2-local-one-pod.csv

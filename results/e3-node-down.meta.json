@@ -1,0 +1,15 @@
+{
+  "start_epoch": 1791705409.492572,
+  "target": "http://52.77.229.6/api/whoami",
+  "duration_s": 240,
+  "events": [
+    {
+      "t_offset_s": 20.0,
+      "message": "EVENT START: aws ec2 stop-instances --force --instance-ids i-03092cde70feafaae > /dev/null"
+    },
+    {
+      "t_offset_s": 22.99,
+      "message": "EVENT DONE (ok)"
+    }
+  ]
+}

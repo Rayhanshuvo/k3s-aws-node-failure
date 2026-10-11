@@ -1,0 +1,20 @@
+Timeline for e4-resilient-node-down (seconds since load test start)
+
+    0.2s  NODES master=Ready worker1=Ready worker2=Ready
+    0.2s  ENDPOINTS 10.42.1.6@worker1 10.42.1.7@worker1 10.42.2.6@worker2 10.42.2.9@worker2
+   20.0s  EVENT START: aws ec2 stop-instances --force --instance-ids i-03092cde70feafaae > /dev/null
+   22.3s  EVENT DONE (ok)
+   22.4s  first failed request (connection closed)
+   22.4s  last failed request (connection closed)
+   34.3s  first slow request (> 900 ms, likely retried by Nginx)
+   56.4s  NODES master=Ready worker1=Ready worker2=NotReady
+   56.4s  ENDPOINTS 10.42.1.6@worker1 10.42.1.7@worker1
+  106.3s  ENDPOINTS 10.42.1.6@worker1 10.42.1.7@worker1 10.42.1.8@worker1 10.42.1.9@worker1
+  238.3s  last slow request
+
+Summary
+  requests            : 47477
+  failed              : 4
+    connection closed : 4
+  slow (> 900 ms)     : 19
+  error window        : 22.4s to 22.4s (0.1 s)

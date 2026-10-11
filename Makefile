@@ -53,10 +53,10 @@ image: ## build the Spring Boot image for amd64 and push it to Docker Hub
 
 # ---------- K3s ----------
 k3s: ## install K3s on master, join both workers, label them
-	$(SSH) master 'sudo hostnamectl set-hostname master && curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644'
+	$(SSH) master 'sudo hostnamectl set-hostname master && curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.31.4+k3s1 sh -s - --write-kubeconfig-mode 644'
 	TOKEN=$$($(SSH) master sudo cat /var/lib/rancher/k3s/server/node-token); \
 	for w in worker1 worker2; do \
-	  $(SSH) $$w "sudo hostnamectl set-hostname $$w && curl -sfL https://get.k3s.io | K3S_URL=https://$(MASTER_PRIV):6443 K3S_TOKEN=$$TOKEN sh -"; \
+	  $(SSH) $$w "sudo hostnamectl set-hostname $$w && curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.31.4+k3s1 K3S_URL=https://$(MASTER_PRIV):6443 K3S_TOKEN=$$TOKEN sh -"; \
 	done
 	$(SSH) master 'until kubectl get node worker1 worker2 >/dev/null 2>&1; do sleep 3; done; kubectl wait --for=condition=Ready node/worker1 node/worker2 --timeout=300s'
 	$(SSH) master 'kubectl label nodes worker1 worker2 role=worker-node --overwrite'

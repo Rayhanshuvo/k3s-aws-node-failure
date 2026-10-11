@@ -1,0 +1,9 @@
+Timeline for e1-baseline (seconds since load test start)
+
+    0.1s  NODES master=Ready worker1=Ready worker2=Ready
+    0.1s  ENDPOINTS 10.42.1.4@worker1 10.42.2.3@worker2
+
+Summary
+  requests            : 11930
+  failed              : 0
+  slow (> 900 ms)     : 0

@@ -1,0 +1,260 @@
+Target http://52.77.229.6/api/whoami | concurrency 10 | 200 req/s max | 240s
+ sec     ok   err  nodes / errors
+   0    116     0  worker1=59 worker2=57
+   1    200     0  worker1=100 worker2=100
+   2    200     0  worker1=100 worker2=100
+   3    200     0  worker1=100 worker2=100
+   4    200     0  worker1=100 worker2=100
+   5    200     0  worker1=100 worker2=100
+   6    200     0  worker1=100 worker2=100
+   7    200     0  worker1=100 worker2=100
+   8    201     0  worker1=100 worker2=101
+   9    199     0  worker1=100 worker2=99
+  10    200     0  worker1=100 worker2=100
+  11    200     0  worker1=100 worker2=100
+  12    198     0  worker1=99 worker2=99
+  13    201     0  worker1=100 worker2=101
+  14    199     0  worker1=100 worker2=99
+  15    200     0  worker1=100 worker2=100
+  16    200     0  worker1=100 worker2=100
+  17    201     0  worker1=100 worker2=101
+  18    200     0  worker1=100 worker2=100
+  19    199     0  worker1=100 worker2=99
+     ==== 20.0s  EVENT START: aws ec2 stop-instances --force --instance-ids i-03092cde70feafaae > /dev/null ====
+  20    201     0  worker1=100 worker2=101
+  21    199     0  worker1=100 worker2=99
+     ==== 22.3s  EVENT DONE (ok) ====
+  22    191     4  worker1=156 worker2=35  !! connection closed=4 <-- ERRORS
+  23    200     0  worker1=200
+  24    200     0  worker1=200
+  25    200     0  worker1=200
+  26    200     0  worker1=200
+  27    200     0  worker1=200
+  28    200     0  worker1=200
+  29    199     0  worker1=199
+  30    200     0  worker1=200
+  31    200     0  worker1=200
+  32    200     0  worker1=200
+  33    185     0  worker1=185
+  34    196     0  worker1=196
+  35    200     0  worker1=200
+  36    200     0  worker1=200
+  37    200     0  worker1=200
+  38    200     0  worker1=200
+  39    200     0  worker1=200
+  40    200     0  worker1=200
+  41    201     0  worker1=201
+  42    200     0  worker1=200
+  43    199     0  worker1=199
+  44    200     0  worker1=200
+  45    185     0  worker1=185
+  46    196     0  worker1=196
+  47    200     0  worker1=200
+  48    200     0  worker1=200
+  49    200     0  worker1=200
+  50    200     0  worker1=200
+  51    200     0  worker1=200
+  52    200     0  worker1=200
+  53    200     0  worker1=200
+  54    201     0  worker1=201
+  55    199     0  worker1=199
+  56    201     0  worker1=201
+  57    184     0  worker1=184
+  58    196     0  worker1=196
+  59    200     0  worker1=200
+  60    201     0  worker1=201
+  61    199     0  worker1=199
+  62    200     0  worker1=200
+  63    200     0  worker1=200
+  64    200     0  worker1=200
+  65    200     0  worker1=200
+  66    200     0  worker1=200
+  67    200     0  worker1=200
+  68    200     0  worker1=200
+  69    185     0  worker1=185
+  70    197     0  worker1=197
+  71    198     0  worker1=198
+  72    201     0  worker1=201
+  73    200     0  worker1=200
+  74    200     0  worker1=200
+  75    200     0  worker1=200
+  76    201     0  worker1=201
+  77    199     0  worker1=199
+  78    200     0  worker1=200
+  79    200     0  worker1=200
+  80    200     0  worker1=200
+  81    185     0  worker1=185
+  82    197     0  worker1=197
+  83    199     0  worker1=199
+  84    200     0  worker1=200
+  85    200     0  worker1=200
+  86    201     0  worker1=201
+  87    200     0  worker1=200
+  88    200     0  worker1=200
+  89    200     0  worker1=200
+  90    200     0  worker1=200
+  91    199     0  worker1=199
+  92    201     0  worker1=201
+  93    184     0  worker1=184
+  94    195     0  worker1=195
+  95    200     0  worker1=200
+  96    201     0  worker1=201
+  97    200     0  worker1=200
+  98    199     0  worker1=199
+  99    200     0  worker1=200
+ 100    200     0  worker1=200
+ 101    200     0  worker1=200
+ 102    200     0  worker1=200
+ 103    200     0  worker1=200
+ 104    200     0  worker1=200
+ 105    185     0  worker1=185
+ 106    191     0  worker1=191
+ 107    196     0  worker1=196
+ 108    183     0  worker1=183
+ 109    201     0  worker1=201
+ 110    198     0  worker1=198
+ 111    202     0  worker1=202
+ 112    200     0  worker1=200
+ 113    199     0  worker1=199
+ 114    201     0  worker1=201
+ 115    199     0  worker1=199
+ 116    200     0  worker1=200
+ 117    186     0  worker1=186
+ 118    196     0  worker1=196
+ 119    200     0  worker1=200
+ 120    200     0  worker1=200
+ 121    200     0  worker1=200
+ 122    200     0  worker1=200
+ 123    200     0  worker1=200
+ 124    200     0  worker1=200
+ 125    200     0  worker1=200
+ 126    200     0  worker1=200
+ 127    200     0  worker1=200
+ 128    200     0  worker1=200
+ 129    183     0  worker1=183
+ 130    197     0  worker1=197
+ 131    200     0  worker1=200
+ 132    200     0  worker1=200
+ 133    190     0  worker1=190
+ 134    142     0  worker1=142
+ 135    202     0  worker1=202
+ 136    200     0  worker1=200
+ 137    200     0  worker1=200
+ 138    200     0  worker1=200
+ 139    200     0  worker1=200
+ 140    200     0  worker1=200
+ 141    185     0  worker1=185
+ 142    196     0  worker1=196
+ 143    200     0  worker1=200
+ 144    200     0  worker1=200
+ 145    198     0  worker1=198
+ 146    201     0  worker1=201
+ 147    201     0  worker1=201
+ 148    200     0  worker1=200
+ 149    200     0  worker1=200
+ 150    200     0  worker1=200
+ 151    200     0  worker1=200
+ 152    200     0  worker1=200
+ 153    185     0  worker1=185
+ 154    196     0  worker1=196
+ 155    200     0  worker1=200
+ 156    200     0  worker1=200
+ 157    200     0  worker1=200
+ 158    200     0  worker1=200
+ 159    200     0  worker1=200
+ 160    200     0  worker1=200
+ 161    200     0  worker1=200
+ 162    200     0  worker1=200
+ 163    200     0  worker1=200
+ 164    200     0  worker1=200
+ 165    185     0  worker1=185
+ 166    195     0  worker1=195
+ 167    200     0  worker1=200
+ 168    200     0  worker1=200
+ 169    200     0  worker1=200
+ 170    200     0  worker1=200
+ 171    200     0  worker1=200
+ 172    200     0  worker1=200
+ 173    200     0  worker1=200
+ 174    200     0  worker1=200
+ 175    200     0  worker1=200
+ 176    200     0  worker1=200
+ 177    185     0  worker1=185
+ 178    196     0  worker1=196
+ 179    200     0  worker1=200
+ 180    200     0  worker1=200
+ 181    200     0  worker1=200
+ 182    200     0  worker1=200
+ 183    200     0  worker1=200
+ 184    200     0  worker1=200
+ 185    200     0  worker1=200
+ 186    200     0  worker1=200
+ 187    200     0  worker1=200
+ 188    200     0  worker1=200
+ 189    185     0  worker1=185
+ 190    195     0  worker1=195
+ 191    200     0  worker1=200
+ 192    200     0  worker1=200
+ 193    197     0  worker1=197
+ 194    201     0  worker1=201
+ 195    200     0  worker1=200
+ 196    200     0  worker1=200
+ 197    200     0  worker1=200
+ 198    200     0  worker1=200
+ 199    200     0  worker1=200
+ 200    200     0  worker1=200
+ 201    185     0  worker1=185
+ 202    196     0  worker1=196
+ 203    200     0  worker1=200
+ 204    200     0  worker1=200
+ 205    200     0  worker1=200
+ 206    200     0  worker1=200
+ 207    200     0  worker1=200
+ 208    200     0  worker1=200
+ 209    200     0  worker1=200
+ 210    197     0  worker1=197
+ 211    199     0  worker1=199
+ 212    204     0  worker1=204
+ 213    185     0  worker1=185
+ 214    196     0  worker1=196
+ 215    200     0  worker1=200
+ 216    200     0  worker1=200
+ 217    200     0  worker1=200
+ 218    200     0  worker1=200
+ 219    200     0  worker1=200
+ 220    200     0  worker1=200
+ 221    200     0  worker1=200
+ 222    200     0  worker1=200
+ 223    200     0  worker1=200
+ 224    200     0  worker1=200
+ 225    185     0  worker1=185
+ 226    196     0  worker1=196
+ 227    200     0  worker1=200
+ 228    200     0  worker1=200
+ 229    200     0  worker1=200
+ 230    200     0  worker1=200
+ 231    200     0  worker1=200
+ 232    200     0  worker1=200
+ 233    200     0  worker1=200
+ 234    200     0  worker1=200
+ 235    200     0  worker1=200
+ 236    200     0  worker1=200
+ 237    185     0  worker1=185
+ 238    195     0  worker1=195
+ 239    199     0  worker1=199
+ 240     10     0  worker1=10
+
+=== Summary ===
+requests       : 47477
+failed         : 4 (0.01%)
+  connection closed   : 4
+seconds w/ err : 1 (from 22s to 22s)
+latency p50    : 27 ms
+latency p99    : 39 ms
+latency max    : 1034 ms
+answered by node:
+  worker1             : 45282 (95.4%)
+  worker2             : 2191 (4.6%)
+event          : 20.0s EVENT START: aws ec2 stop-instances --force --instance-ids i-03092cde70feafaae > /dev/null
+event          : 22.3s EVENT DONE (ok)
+raw data       : results/e4-resilient-node-down.csv

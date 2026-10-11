@@ -1,0 +1,20 @@
+Timeline for e3-node-down (seconds since load test start)
+
+    0.2s  NODES master=Ready worker1=Ready worker2=Ready
+    0.2s  ENDPOINTS 10.42.1.4@worker1 10.42.2.4@worker2
+   20.0s  EVENT START: aws ec2 stop-instances --force --instance-ids i-03092cde70feafaae > /dev/null
+   23.0s  EVENT DONE (ok)
+   23.6s  first failed request (connection closed)
+   65.1s  NODES master=Ready worker1=Ready worker2=NotReady
+   65.1s  ENDPOINTS 10.42.1.4@worker1
+   70.6s  last failed request (connection closed)
+   71.5s  first slow request (> 900 ms, likely retried by Nginx)
+  238.6s  last slow request
+
+Summary
+  requests            : 46647
+  failed              : 8406
+    connection closed : 6335
+    connection reset  : 2071
+  slow (> 900 ms)     : 15
+  error window        : 23.6s to 70.6s (47.0 s)

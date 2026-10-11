@@ -1,0 +1,75 @@
+Target http://52.77.229.6/api/whoami | concurrency 10 | 200 req/s max | 60s
+ sec     ok   err  nodes / errors
+   0    121     0  worker1=60 worker2=61
+   1    200     0  worker1=97 worker2=103
+   2    201     0  worker1=105 worker2=96
+   3    200     0  worker1=108 worker2=92
+   4    200     0  worker1=112 worker2=88
+   5    200     0  worker1=91 worker2=109
+   6    200     0  worker1=116 worker2=84
+   7    200     0  worker1=101 worker2=99
+   8    200     0  worker1=113 worker2=87
+   9    200     0  worker1=108 worker2=92
+  10    200     0  worker1=101 worker2=99
+  11    200     0  worker1=100 worker2=100
+  12    200     0  worker1=97 worker2=103
+  13    200     0  worker1=108 worker2=92
+  14    200     0  worker1=97 worker2=103
+  15    200     0  worker1=117 worker2=83
+  16    200     0  worker1=108 worker2=92
+  17    200     0  worker1=91 worker2=109
+  18    200     0  worker1=101 worker2=99
+  19    200     0  worker1=90 worker2=110
+  20    200     0  worker1=100 worker2=100
+  21    200     0  worker1=107 worker2=93
+  22    200     0  worker1=95 worker2=105
+  23    200     0  worker1=98 worker2=102
+  24    200     0  worker1=102 worker2=98
+  25    198     0  worker1=97 worker2=101
+  26    200     0  worker1=105 worker2=95
+  27    200     0  worker1=98 worker2=102
+  28    200     0  worker1=112 worker2=88
+  29    200     0  worker1=84 worker2=116
+  30    200     0  worker1=108 worker2=92
+  31    200     0  worker1=105 worker2=95
+  32    200     0  worker1=98 worker2=102
+  33    200     0  worker1=102 worker2=98
+  34    200     0  worker1=99 worker2=101
+  35    200     0  worker1=102 worker2=98
+  36    200     0  worker1=102 worker2=98
+  37    200     0  worker1=89 worker2=111
+  38    200     0  worker1=102 worker2=98
+  39    198     0  worker1=94 worker2=104
+  40    201     0  worker1=85 worker2=116
+  41    201     0  worker1=112 worker2=89
+  42    200     0  worker1=114 worker2=86
+  43    200     0  worker1=105 worker2=95
+  44    200     0  worker1=105 worker2=95
+  45    200     0  worker1=105 worker2=95
+  46    200     0  worker1=88 worker2=112
+  47    200     0  worker1=83 worker2=117
+  48    200     0  worker1=114 worker2=86
+  49    200     0  worker1=93 worker2=107
+  50    200     0  worker1=97 worker2=103
+  51    200     0  worker1=92 worker2=108
+  52    200     0  worker1=108 worker2=92
+  53    200     0  worker1=92 worker2=108
+  54    200     0  worker1=96 worker2=104
+  55    200     0  worker1=102 worker2=98
+  56    200     0  worker1=101 worker2=99
+  57    200     0  worker1=102 worker2=98
+  58    200     0  worker1=98 worker2=102
+  59    200     0  worker1=101 worker2=99
+  60     10     0  worker1=4 worker2=6
+
+=== Summary ===
+requests       : 11930
+failed         : 0 (0.00%)
+seconds w/ err : 0
+latency p50    : 27 ms
+latency p99    : 35 ms
+latency max    : 411 ms
+answered by node:
+  worker1             : 6017 (50.4%)
+  worker2             : 5913 (49.6%)
+raw data       : results/e1-baseline.csv

@@ -1,0 +1,11 @@
+Timeline for e2-local-one-pod (seconds since load test start)
+
+    0.4s  NODES master=Ready worker1=Ready worker2=Ready
+    0.4s  ENDPOINTS 10.42.1.4@worker1
+    1.4s  first slow request (> 900 ms, likely retried by Nginx)
+   60.9s  last slow request
+
+Summary
+  requests            : 11652
+  failed              : 0
+  slow (> 900 ms)     : 15

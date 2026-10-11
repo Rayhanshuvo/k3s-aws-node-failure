@@ -1,0 +1,2 @@
+1791704721.336654273 NODES master=Ready worker1=Ready worker2=Ready 
+1791704721.336654273 ENDPOINTS 10.42.1.4@worker1 10.42.2.3@worker2 

@@ -1,0 +1,8 @@
+NAME      STATUS   ROLES                  AGE   VERSION
+master    Ready    control-plane,master   22m   v1.31.4+k3s1
+worker1   Ready    <none>                 22m   v1.31.4+k3s1
+worker2   Ready    <none>                 21m   v1.31.4+k3s1
+
+NAME                     READY   STATUS    RESTARTS   AGE     IP          NODE      NOMINATED NODE   READINESS GATES
+whoami-cbb9df9b4-6qm8q   1/1     Running   0          8m33s   10.42.2.4   worker2   <none>           <none>
+whoami-cbb9df9b4-jd95v   1/1     Running   0          17m     10.42.1.4   worker1   <none>           <none>

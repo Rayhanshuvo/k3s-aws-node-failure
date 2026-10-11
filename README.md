@@ -195,7 +195,7 @@ Then the experiments above. When finished: **`make destroy`** (the instances cos
 | `scripts/plot.py` | chart of requests per second for several runs |
 | `results/` | raw output of every run |
 
-## Changes from the Poridhi lab
+
 
 - Flask replaced by a Spring Boot service that reports which pod and node answered.
 - The lab's Kubernetes manifest has broken indentation; fixed here.

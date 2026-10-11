@@ -1,0 +1,17 @@
+# externalTrafficPolicy: Local: a node only forwards NodePort traffic to pods ON THAT NODE.
+# No second hop, and the app sees the real client IP (here: the Nginx instance).
+# Downside: a node with no local pod does not answer on 30001 at all.
+apiVersion: v1
+kind: Service
+metadata:
+  name: whoami
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  selector:
+    app: whoami
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30001

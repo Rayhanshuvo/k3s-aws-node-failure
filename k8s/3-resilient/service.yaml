@@ -1,0 +1,15 @@
+# externalTrafficPolicy: Local, so a surviving node never forwards to pods on the dead node.
+apiVersion: v1
+kind: Service
+metadata:
+  name: whoami
+spec:
+  type: NodePort
+  externalTrafficPolicy: Local
+  selector:
+    app: whoami
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30001

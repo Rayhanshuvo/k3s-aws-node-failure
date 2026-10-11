@@ -1,0 +1,16 @@
+# NodePort 30001 on every node. externalTrafficPolicy: Cluster (the default):
+# a request arriving at worker1 may be forwarded by kube-proxy to a pod on worker2.
+apiVersion: v1
+kind: Service
+metadata:
+  name: whoami
+spec:
+  type: NodePort
+  externalTrafficPolicy: Cluster
+  selector:
+    app: whoami
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30001

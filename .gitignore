@@ -1,0 +1,11 @@
+# secrets: never commit
+*.pem
+.env.mk
+ssh/config
+ssh/known_hosts
+infra/node_modules/
+infra/Pulumi.*.yaml
+# generated
+nginx/nginx.conf
+app/target/
+__pycache__/

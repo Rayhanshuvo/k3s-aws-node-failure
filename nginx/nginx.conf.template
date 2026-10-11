@@ -1,0 +1,27 @@
+# Layer 4 (TCP) load balancer in front of the two K3s workers.
+# Nginx does not read HTTP here: it only forwards TCP connections to <worker>:30001.
+# WORKER1_IP / WORKER2_IP are replaced with the workers' PRIVATE IPs by `make nginx`.
+events {}
+
+stream {
+    log_format l4 '$remote_addr [$time_local] -> $upstream_addr '
+                  'status=$status connect=$upstream_connect_time session=$session_time';
+    access_log /var/log/nginx/stream.log l4;
+
+    upstream k3s_workers {
+        # Passive health check: after max_fails failed connects within fail_timeout,
+        # Nginx stops sending new connections to that worker for fail_timeout.
+        # (These are the stream module defaults, written out so they are visible.)
+        server WORKER1_IP:30001 max_fails=1 fail_timeout=10s;
+        server WORKER2_IP:30001 max_fails=1 fail_timeout=10s;
+    }
+
+    server {
+        listen 80;
+        proxy_pass k3s_workers;
+        proxy_connect_timeout 1s;     # a dead worker costs at most 1 s before trying the next one
+        proxy_timeout 10s;            # idle timeout of an established connection
+        proxy_next_upstream on;       # on a failed connect, try the other worker
+        proxy_next_upstream_tries 2;
+    }
+}

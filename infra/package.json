@@ -1,0 +1,9 @@
+{
+  "name": "k3s-aws-node-failure",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "@pulumi/aws": "^6.0.0",
+    "@pulumi/pulumi": "^3.0.0"
+  }
+}

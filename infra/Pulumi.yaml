@@ -1,0 +1,3 @@
+name: k3s-aws-node-failure
+runtime: nodejs
+description: VPC, Nginx load balancer and a 3-node K3s cluster for node-failure experiments

@@ -158,7 +158,16 @@ The remaining cost is the same as in E2: 19 requests took about 1 s, once every 
 - **E5, tune Nginx:** a higher `max_fails` / shorter `fail_timeout` in the default setup, to measure how much of E3 a load balancer setting alone can fix.
 - **E6, planned maintenance:** `kubectl drain` a worker with a `PodDisruptionBudget`, which should be completely invisible to users thanks to `preStop` and graceful shutdown.
 - **E7, Layer 7:** the same failure behind an HTTP (L7) load balancer that retries failed requests, compared with this L4 setup.
+## Proof: it ran on real AWS
 
+| | |
+|---|---|
+| Infrastructure created by Pulumi (4 EC2 instances in a VPC) | ![Pulumi outputs](screenshots/pulumi-outputs.png) |
+| 3-node K3s cluster, all `Ready` | ![kubectl get nodes](screenshots/nodes-ready.png) |
+| Requests through Nginx: each answer names the pod and node | ![whoami responses](screenshots/check-whoami.png) |
+| The service from a browser, via the Nginx public IP | ![browser](screenshots/browser-nginx.png) |
+
+The instances were deleted after the experiments (`make destroy`), so the IPs in these screenshots no longer exist.
 ## Run it yourself
 
 Requirements on your machine: AWS CLI (configured), Pulumi (`pulumi login --local` works), Node.js, Docker, Python 3, a Docker Hub account.
